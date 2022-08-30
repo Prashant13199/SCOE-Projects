@@ -1,0 +1,817 @@
+T_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/line_descriptor/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/saliency/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/saliency/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Tesseract:   NO
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/text/CMakeLists.txt:21 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/text/CMakeLists.txt:21 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  modules/calib3d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/ccalib/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/ccalib/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/rgbd/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/rgbd/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/rgbd/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/rgbd/CMakeLists.txt:3 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/videostab/CMakeLists.txt:11 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/videostab/CMakeLists.txt:11 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  /home/pi/opencv-3.0.0/cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  /home/pi/opencv-3.0.0/cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  /home/pi/opencv_contrib-3.0.0/modules/xfeatures2d/CMakeLists.txt:2 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:806 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:688 (_ocv_create_module)
+  cmake/OpenCVModule.cmake:857 (ocv_create_module)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:1008 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:859 (ocv_add_accuracy_tests)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:80 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/OpenCVPCHSupport.cmake:81 (GET_DIRECTORY_PROPERTY):
+  Policy CMP0059 is not set: Do not treat DEFINITIONS as a built-in directory
+  property.  Run "cmake --help-policy CMP0059" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake/OpenCVPCHSupport.cmake:256 (_PCH_GET_COMPILE_FLAGS)
+  cmake/OpenCVPCHSupport.cmake:369 (add_precompiled_header)
+  cmake/OpenCVModule.cmake:835 (ocv_add_precompiled_header_to_target)
+  cmake/OpenCVModule.cmake:949 (_ocv_add_precompiled_headers)
+  cmake/OpenCVModule.cmake:860 (ocv_add_perf_tests)
+  modules/stitching/CMakeLists.txt:7 (ocv_define_module)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-c:1: DeprecationWarning: SO is deprecated, use EXT_SUFFIX
+-- 
+-- General configuration for OpenCV 3.0.0 =====================================
+--   Version control:               unknown
+-- 
+--   Platform:
+--     Host:                        Linux 4.19.75-v7+ armv7l
+--     CMake:                       3.13.4
+--     CMake generator:             Unix Makefiles
+--     CMake build tool:            /usr/bin/make
+--     Configuration:               RELEASE
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      YES
+--     C++ Compiler:                /usr/bin/c++  (ver 8.3.0)
+--     C++ flags (Release):         -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -O3 -DNDEBUG  -DNDEBUG
+--     C++ flags (Debug):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -g  -O0 -DDEBUG -D_DEBUG
+--     C Compiler:                  /usr/bin/cc
+--     C flags (Release):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -O3 -DNDEBUG  -DNDEBUG
+--     C flags (Debug):             -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -g  -O0 -DDEBUG -D_DEBUG
+--     Linker flags (Release):
+--     Linker flags (Debug):
+--     Precompiled headers:         YES
+--     Extra dependencies:          /usr/lib/arm-linux-gnueabihf/libpng.so /usr/lib/arm-linux-gnueabihf/libz.so /usr/lib/arm-linux-gnueabihf/libjasper.so v4l1 v4l2 avcodec avformat avutil swscale dl m pthread rt
+--     3rdparty dependencies:       libwebp libtiff libjpeg IlmImf
+-- 
+--   OpenCV modules:
+--     To be built:                 hal core flann imgproc ml photo reg surface_matching video face imgcodecs shape videoio highgui objdetect optflow superres tracking ts ximgproc xobjdetect xphoto adas bgsegm bioinspired features2d latentsvm line_descriptor saliency text calib3d ccalib datasets rgbd videostab xfeatures2d stitching python2 python3
+--     Disabled:                    world contrib_world
+--     Disabled by dependency:      -
+--     Unavailable:                 cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev java viz cvv matlab
+-- 
+--   GUI: 
+--     QT:                          NO
+--     GTK+:                        NO
+--     GThread :                    NO
+--     GtkGlExt:                    NO
+--     OpenGL support:              NO
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        /usr/lib/arm-linux-gnueabihf/libz.so (ver 1.2.11)
+--     JPEG:                        libjpeg (ver 90)
+--     WEBP:                        build (ver 0.3.1)
+--     PNG:                         /usr/lib/arm-linux-gnueabihf/libpng.so (ver 1.6.36)
+--     TIFF:                        build (ver 42 - 4.0.2)
+--     JPEG 2000:                   /usr/lib/arm-linux-gnueabihf/libjasper.so (ver 1.900.1)
+--     OpenEXR:                     build (ver 1.7.1)
+--     GDAL:                        NO
+-- 
+--   Video I/O:
+--     DC1394 1.x:                  NO
+--     DC1394 2.x:                  NO
+--     FFMPEG:                      YES
+--       codec:                     YES (ver 58.35.100)
+--       format:                    YES (ver 58.20.100)
+--       util:                      YES (ver 56.22.100)
+--       swscale:                   YES (ver 5.3.100)
+--       resample:                  NO
+--       gentoo-style:              YES
+--     GStreamer:                   NO
+--     OpenNI:                      NO
+--     OpenNI PrimeSensor Modules:  NO
+--     OpenNI2:                     NO
+--     PvAPI:                       NO
+--     GigEVisionSDK:               NO
+--     UniCap:                      NO
+--     UniCap ucil:                 NO
+--     V4L/V4L2:                    Using libv4l1 (ver 1.16.3) / libv4l2 (ver 1.16.3)
+--     XIMEA:                       NO
+--     Xine:                        NO
+--     gPhoto2:                     NO
+-- 
+--   Other third-party libraries:
+--     Use IPP:                     NO
+--     Use Eigen:                   NO
+--     Use TBB:                     NO
+--     Use OpenMP:                  NO
+--     Use GCD                      NO
+--     Use Concurrency              NO
+--     Use C=:                      NO
+--     Use pthreads for parallel for:
+--                                  YES
+--     Use Cuda:                    NO
+--     Use OpenCL:                  YES
+-- 
+--   OpenCL:
+--     Version:                     dynamic
+--     Include path:                /home/pi/opencv-3.0.0/3rdparty/include/opencl/1.2
+--     Use AMDFFT:                  NO
+--     Use AMDBLAS:                 NO
+-- 
+--   Python 2:
+--     Interpreter:                 /usr/bin/python2.7 (ver 2.7.16)
+--     Libraries:                   /usr/lib/arm-linux-gnueabihf/libpython2.7.so (ver 2.7.16)
+--     numpy:                       /usr/lib/python2.7/dist-packages/numpy/core/include (ver 1.16.2)
+--     packages path:               lib/python2.7/dist-packages
+-- 
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3 (ver 3.7.3)
+--     Libraries:                   /usr/lib/arm-linux-gnueabihf/libpython3.7m.so (ver 3.7.3)
+--     numpy:                       /usr/lib/python3/dist-packages/numpy/core/include (ver 1.16.2)
+--     packages path:               lib/python3.7/dist-packages
+-- 
+--   Python (for build):            /usr/bin/python2.7
+-- 
+--   Java:
+--     ant:                         /usr/bin/ant (ver 1.10.5)
+--     JNI:                         NO
+--     Java wrappers:               NO
+--     Java tests:                  NO
+-- 
+--   Matlab:
+--     mex:                         NO
+-- 
+--   Documentation:
+--     Doxygen:                     NO
+--     PlantUML:                    NO
+-- 
+--   Tests and samples:
+--     Tests:                       YES
+--     Performance tests:           YES
+--     C/C++ Examples:              YES
+-- 
+--   Install path:                  /usr/local
+-- 
+--   cvconfig.h is in:              /home/pi/opencv-3.0.0/build
+-- -----------------------------------------------------------------
+-- 
+-- Configuring incomplete, errors occurred!
+See also "/home/pi/opencv-3.0.0/build/CMakeFiles/CMakeOutput.log".
+See also "/home/pi/opencv-3.0.0/build/CMakeFiles/CMakeError.log".
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo apt-get install libhdf5-dev libhdf5-serial-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'libhdf5-dev' instead of 'libhdf5-serial-dev'
+The following additional packages will be installed:
+  hdf5-helpers libaec-dev libaec0 libhdf5-103 libhdf5-cpp-103 libjpeg-dev
+  libjpeg62-turbo-dev libsz2
+Suggested packages:
+  libhdf5-doc
+The following NEW packages will be installed:
+  hdf5-helpers libaec-dev libaec0 libhdf5-103 libhdf5-cpp-103 libhdf5-dev
+  libjpeg-dev libjpeg62-turbo-dev libsz2
+0 upgraded, 9 newly installed, 0 to remove and 271 not upgraded.
+Need to get 3,684 kB/3,920 kB of archives.
+After this operation, 14.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mirror.pit.teraswitch.com/raspbian/raspbian buster/main armhf hdf5-helpers armhf 1.10.4+repack-10 [35.2 kB]
+Get:3 http://mirror.pit.teraswitch.com/raspbian/raspbian buster/main armhf libsz2 armhf 1.0.2-1 [6,640 B]
+Get:2 http://mirror.ossplanet.net/raspbian/raspbian buster/main armhf libaec0 armhf 1.0.2-1 [21.3 kB]
+Get:5 http://mirror.pit.teraswitch.com/raspbian/raspbian buster/main armhf libhdf5-103 armhf 1.10.4+repack-10 [1,259 kB]
+Get:6 http://ftp.halifax.rwth-aachen.de/raspbian/raspbian buster/main armhf libhdf5-cpp-103 armhf 1.10.4+repack-10 [121 kB]
+Get:7 http://mirror.serverius.net/raspbian/raspbian buster/main armhf libhdf5-dev armhf 1.10.4+repack-10 [2,221 kB]
+Get:4 http://mirror.ossplanet.net/raspbian/raspbian buster/main armhf libaec-dev armhf 1.0.2-1 [19.1 kB]
+Fetched 3,684 kB in 15s (251 kB/s)                                             
+Selecting previously unselected package hdf5-helpers.
+(Reading database ... 146138 files and directories currently installed.)
+Preparing to unpack .../0-hdf5-helpers_1.10.4+repack-10_armhf.deb ...
+Unpacking hdf5-helpers (1.10.4+repack-10) ...
+Selecting previously unselected package libaec0:armhf.
+Preparing to unpack .../1-libaec0_1.0.2-1_armhf.deb ...
+Unpacking libaec0:armhf (1.0.2-1) ...
+Selecting previously unselected package libsz2:armhf.
+Preparing to unpack .../2-libsz2_1.0.2-1_armhf.deb ...
+Unpacking libsz2:armhf (1.0.2-1) ...
+Selecting previously unselected package libaec-dev:armhf.
+Preparing to unpack .../3-libaec-dev_1.0.2-1_armhf.deb ...
+Unpacking libaec-dev:armhf (1.0.2-1) ...
+Selecting previously unselected package libhdf5-103:armhf.
+Preparing to unpack .../4-libhdf5-103_1.10.4+repack-10_armhf.deb ...
+Unpacking libhdf5-103:armhf (1.10.4+repack-10) ...
+Selecting previously unselected package libhdf5-cpp-103:armhf.
+Preparing to unpack .../5-libhdf5-cpp-103_1.10.4+repack-10_armhf.deb ...
+Unpacking libhdf5-cpp-103:armhf (1.10.4+repack-10) ...
+Selecting previously unselected package libjpeg62-turbo-dev:armhf.
+Preparing to unpack .../6-libjpeg62-turbo-dev_1%3a1.5.2-2+b1_armhf.deb ...
+Unpacking libjpeg62-turbo-dev:armhf (1:1.5.2-2+b1) ...
+Selecting previously unselected package libjpeg-dev.
+Preparing to unpack .../7-libjpeg-dev_1%3a1.5.2-2_all.deb ...
+Unpacking libjpeg-dev (1:1.5.2-2) ...
+Selecting previously unselected package libhdf5-dev.
+Preparing to unpack .../8-libhdf5-dev_1.10.4+repack-10_armhf.deb ...
+Unpacking libhdf5-dev (1.10.4+repack-10) ...
+Setting up hdf5-helpers (1.10.4+repack-10) ...
+Setting up libaec0:armhf (1.0.2-1) ...
+Setting up libjpeg62-turbo-dev:armhf (1:1.5.2-2+b1) ...
+Setting up libsz2:armhf (1.0.2-1) ...
+Setting up libaec-dev:armhf (1.0.2-1) ...
+Setting up libjpeg-dev (1:1.5.2-2) ...
+Setting up libhdf5-103:armhf (1.10.4+repack-10) ...
+Setting up libhdf5-cpp-103:armhf (1.10.4+repack-10) ...
+Setting up libhdf5-dev (1.10.4+repack-10) ...
+update-alternatives: using /usr/lib/arm-linux-gnueabihf/pkgconfig/hdf5-serial.pc to provide /usr/lib/arm-linux-gnueabihf/pkgconfig/hdf5.pc (hdf5.pc) in auto mode
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo apt-get install libqtwebkit4 libqt4-test
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libqt4-test is already the newest version (4:4.8.7+dfsg-18+rpi1).
+The following additional packages will be installed:
+  libqt4-network libqt4-xmlpatterns
+The following NEW packages will be installed:
+  libqt4-network libqt4-xmlpatterns libqtwebkit4
+0 upgraded, 3 newly installed, 0 to remove and 271 not upgraded.
+Need to get 8,198 kB of archives.
+After this operation, 34.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mirror.ossplanet.net/raspbian/raspbian buster/main armhf libqt4-network armhf 4:4.8.7+dfsg-18+rpi1 [491 kB]
+Get:3 http://mirror.pit.teraswitch.com/raspbian/raspbian buster/main armhf libqtwebkit4 armhf 2.3.4.dfsg-10 [6,834 kB]
+Get:2 http://ftp.halifax.rwth-aachen.de/raspbian/raspbian buster/main armhf libqt4-xmlpatterns armhf 4:4.8.7+dfsg-18+rpi1 [873 kB]
+Fetched 8,198 kB in 33s (249 kB/s)                                             
+Selecting previously unselected package libqt4-network:armhf.
+(Reading database ... 146374 files and directories currently installed.)
+Preparing to unpack .../libqt4-network_4%3a4.8.7+dfsg-18+rpi1_armhf.deb ...
+Unpacking libqt4-network:armhf (4:4.8.7+dfsg-18+rpi1) ...
+Selecting previously unselected package libqt4-xmlpatterns:armhf.
+Preparing to unpack .../libqt4-xmlpatterns_4%3a4.8.7+dfsg-18+rpi1_armhf.deb ...
+Unpacking libqt4-xmlpatterns:armhf (4:4.8.7+dfsg-18+rpi1) ...
+Selecting previously unselected package libqtwebkit4:armhf.
+Preparing to unpack .../libqtwebkit4_2.3.4.dfsg-10_armhf.deb ...
+Unpacking libqtwebkit4:armhf (2.3.4.dfsg-10) ...
+Setting up libqt4-network:armhf (4:4.8.7+dfsg-18+rpi1) ...
+Setting up libqt4-xmlpatterns:armhf (4:4.8.7+dfsg-18+rpi1) ...
+Setting up libqtwebkit4:armhf (2.3.4.dfsg-10) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo apt-get install libatlas-base-dev libjasper-dev libqtgui4 python3-pyqt5  
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libatlas-base-dev is already the newest version (3.10.3-8+rpi1).
+libjasper-dev is already the newest version (1.900.1-debian1-2.4+deb8u1).
+libqtgui4 is already the newest version (4:4.8.7+dfsg-18+rpi1).
+python3-pyqt5 is already the newest version (5.11.3+dfsg-1+rpi1+b3).
+python3-pyqt5 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo pip install opencv-contrib-python
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting opencv-contrib-python
+  Could not find a version that satisfies the requirement opencv-contrib-python (from versions: )
+No matching distribution found for opencv-contrib-python
+pi@raspberrypi:~/opencv-3.0.0/build $ pip install --upgrade pip
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl (1.4MB)
+    100% |████████████████████████████████| 1.4MB 62kB/s 
+Installing collected packages: pip
+Successfully installed pip-20.0.2
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo pip install opencv-contrib-python
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting opencv-contrib-python
+  Could not find a version that satisfies the requirement opencv-contrib-python (from versions: )
+No matching distribution found for opencv-contrib-python
+pi@raspberrypi:~/opencv-3.0.0/build $ pip install opencv-python
+WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+ERROR: Could not find a version that satisfies the requirement opencv-python (from versions: none)
+ERROR: No matching distribution found for opencv-python
+pi@raspberrypi:~/opencv-3.0.0/build $ python -m pip install --upgrade pip
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already up-to-date: pip in /home/pi/.local/lib/python2.7/site-packages (20.0.2)
+pi@raspberrypi:~/opencv-3.0.0/build $ sudo pip3 install opencv-contrib-python
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting opencv-contrib-python
+  Downloading https://www.piwheels.org/simple/opencv-contrib-python/opencv_contrib_python-4.1.1.26-cp37-cp37m-linux_armv7l.whl (15.9MB)
+    100% |████████████████████████████████| 15.9MB 17kB/s 
+Requirement already satisfied: numpy>=1.16.2 in /usr/lib/python3/dist-packages (from opencv-contrib-python) (1.16.2)
+Installing collected packages: opencv-contrib-python
+Successfully installed opencv-contrib-python-4.1.1.26
+pi@raspberrypi:~/opencv-3.0.0/build $ python3
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/pi/.local/lib/python3.7/site-packages/cv2/__init__.py", line 3, in <module>
+    from .cv2 import *
+ImportError: /home/pi/.local/lib/python3.7/site-packages/cv2/cv2.cpython-37m-arm-linux-gnueabihf.so: undefined symbol: __atomic_fetch_add_8
+>>> cv.__version__
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cv' is not defined
+>>> cv2.__version__
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cv2' is not defined
+>>> exit()
+pi@raspberrypi:~/opencv-3.0.0/build $ cd..
+bash: cd..: command not found
+pi@raspberrypi:~/opencv-3.0.0/build $ cd//
+bash: cd//: No such file or directory
+pi@raspberrypi:~/opencv-3.0.0/build $ cd--
+bash: cd--: command not found
+pi@raspberrypi:~/opencv-3.0.0/build $ cd --
+pi@raspberrypi:~ $ sudo python3 get-pip.py
+python3: can't open file 'get-pip.py': [Errno 2] No such file or directory
+pi@raspberrypi:~ $ sudo python get-pip.py
+python: can't open file 'get-pip.py': [Errno 2] No such file or directory
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ sudo apt-get install libhdf5-dev libhdf5-serial-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'libhdf5-dev' instead of 'libhdf5-serial-dev'
+libhdf5-dev is already the newest version (1.10.4+repack-10).
+0 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+pi@raspberrypi:~ $ sudo apt-get install libqtwebkit4 libqt4-test
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libqt4-test is already the newest version (4:4.8.7+dfsg-18+rpi1).
+libqtwebkit4 is already the newest version (2.3.4.dfsg-10).
+0 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+pi@raspberrypi:~ $ sudo apt-get install libatlas-base-dev libjasper-dev libqtgui4 python3-pyqt5
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libatlas-base-dev is already the newest version (3.10.3-8+rpi1).
+libjasper-dev is already the newest version (1.900.1-debian1-2.4+deb8u1).
+libqtgui4 is already the newest version (4:4.8.7+dfsg-18+rpi1).
+python3-pyqt5 is already the newest version (5.11.3+dfsg-1+rpi1+b3).
+0 upgraded, 0 newly installed, 0 to remove and 271 not upgraded.
+pi@raspberrypi:~ $ sudo pip install opencv-contrib-python
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting opencv-contrib-python
+  Could not find a version that satisfies the requirement opencv-contrib-python (from versions: )
+No matching distribution found for opencv-contrib-python
+pi@raspberrypi:~ $ sudo pip3 install opencv-contrib-python
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: opencv-contrib-python in /usr/local/lib/python3.7/dist-packages (4.1.1.26)
+Requirement already satisfied: numpy>=1.16.2 in /usr/lib/python3/dist-packages (from opencv-contrib-python) (1.16.2)
+pi@raspberrypi:~ $ python3
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/pi/.local/lib/python3.7/site-packages/cv2/__init__.py", line 3, in <module>
+    from .cv2 import *
+ImportError: /home/pi/.local/lib/python3.7/site-packages/cv2/cv2.cpython-37m-arm-linux-gnueabihf.so: undefined symbol: __atomic_fetch_add_8
+>>> exit()
+pi@raspberrypi:~ $ sudo find / -type f -name ‘atom.so*’ /usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0
+find: paths must precede expression: `/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0'
+find: possible unquoted pattern after predicate `-name'?
+pi@raspberrypi:~ $ sudo find / -type f -name ‘atom.so*’ /usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0
+find: paths must precede expression: `/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0'
+find: possible unquoted pattern after predicate `-name'?
+pi@raspberrypi:~ $ LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0 python3
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> 
+>>> import cv2 print(cv2.version) 4.1.1
+  File "<stdin>", line 1
+    import cv2 print(cv2.version) 4.1.1
+                   ^
+SyntaxError: invalid syntax
+>>> import cv2 print(cv2.version) 
+  File "<stdin>", line 1
+    import cv2 print(cv2.version) 
+                   ^
+SyntaxError: invalid syntax
+>>> import cv2
+>>> cv2.__version__
+'4.1.1'
+>>> exit()
+pi@raspberrypi:~ $ python3
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/pi/.local/lib/python3.7/site-packages/cv2/__init__.py", line 3, in <module>
+    from .cv2 import *
+ImportError: /home/pi/.local/lib/python3.7/site-packages/cv2/cv2.cpython-37m-arm-linux-gnueabihf.so: undefined symbol: __atomic_fetch_add_8
+>>> exit()
+pi@raspberrypi:~ $ LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0 python3
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'4.1.1'
+>>> exit()
+pi@raspberrypi:~ $ 

@@ -1,0 +1,10 @@
+# Instructions for running
+
+Local Web App : http://127.0.0.1:4040
+
+Open Web App for Storage URL . 
+
+#Run Commands:
+
+cd siya_storage
+python3 app.py

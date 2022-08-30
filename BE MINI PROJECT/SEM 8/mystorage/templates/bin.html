@@ -1,0 +1,267 @@
+{% extends "base.html" %}
+{% block title %}Bin{% endblock %}
+{% block page_content %}
+
+<body style="color:grey">
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <br>
+  <ul class="flashes">
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert" style="margin-right: 50px;">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#sub').on('click', function () {
+        if (confirm_click()) {
+          var arr = [];
+          $("input:checkbox[name=type]:checked").each(function () {
+            arr.push($(this).val());
+          });
+          var array = JSON.stringify(arr);
+          req = $.ajax({
+            url: '/deletebins',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: array
+          });
+          req.done(function (data) {
+            var route = data.urll;
+            $("#myTable").load(" #myTable");
+            showSnackbar(data.message);
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#restore').on('click', function () {
+        var arr = [];
+        $("input:checkbox[name=type]:checked").each(function () {
+          arr.push($(this).val());
+        });
+        var array = JSON.stringify(arr);
+        req = $.ajax({
+          url: '/restoremultiple',
+          type: 'POST',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: array
+        });
+        req.done(function (data) {
+          $("#myTable").load(" #myTable");
+            showSnackbar(data.message);
+        });
+      });
+    });
+  </script>
+  <style>
+    input.checkbox {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+  <style>
+    #snackbar {
+      /* By Default, Hidden */
+      visibility: hidden; 
+      min-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      border-radius: 2px;
+      padding: 16px;
+      /* To always Keep on 
+        Top of screen */
+      position: fixed;
+    
+      /* To be displayed above 
+        Parent HTML DOM element  */ 
+      z-index: 1; 
+    
+      /* Position Bottom Left 
+        Corner of Screen */
+      left: 10px;
+      bottom: 60px;
+  }
+  .show-bar {
+      visibility: visible !important;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  }
+  @keyframes fadein {
+      from {
+          bottom: 0;
+          opacity: 0;
+      }
+      to {
+          bottom: 30px;
+          opacity: 1;
+      }
+  }
+  @keyframes fadeout {
+      from {
+          bottom: 30px;
+          opacity: 1;
+      }
+      to {
+          bottom: 0;
+          opacity: 0;
+      }
+  }
+  </style>
+  <script>
+    function showSnackbar(msg) {
+        var snackBar = 
+          document.getElementById("snackbar")
+        snackBar.innerHTML = msg
+        snackBar.className = "show-bar";
+        setTimeout(function () {
+          snackBar.className = 
+              snackBar.className.replace("show-bar", ""); 
+        }, 3000);
+    }
+  </script>
+  <script type="text/javascript" src="{{ url_for('gallery.static', filename='jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('gallery.static', filename='jquery.masonry.min.js') }}"></script>
+  <div id="snackbar" style="text-align:center;"></div>
+  <br><br><br><br>
+  <div class="container-fluid">
+    <h1 style="font-size:45px; float: left; "><b>bin</b></h1>
+  </div>
+  <br>
+  <center>
+    <div class="container-fluid">
+      <input type="button" onclick='selects()' value="Select All" class="btn btn-success btn-sm" style="float: left;">
+      <input type="button" onclick='deSelect()' value="Deselect All" class="btn btn-warning btn-sm"
+        style="float: left;margin-left:10px">
+      
+      <button id="sub" type="button" class="btn btn-danger btn-sm" class="social-link"
+        style="float:left; margin-left: 15px" data-toggle="tooltip" title="Delete"><i
+          class="fa fa-trash fa-lg"></i></button>
+      <button id="restore" type="button" class="btn btn-light btn-sm" class="social-link"
+        style="float:left; margin-left: 15px" data-toggle="tooltip" title="Restore"><i
+          class="fa fa-folder fa-lg"></i></button>
+      <br><br>
+      <input class="form-control" id="myInput" type="text" placeholder="Search" style="background-color: white;">
+      <br>
+      <div class='table-responsive' id="myTable">
+        <table class="table table-hover" style="background-color: white; width: 100%; color: grey" id="sort">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="text-align:left;" width="25%" onclick="sortTable(0)">File Name <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+              <th style="text-align:center;" onclick="sortTable(1)">Size <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+              <th style="text-align:center;" onclick="sortTable(2)">Date <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for image in (images) %}
+            <td><input class="checkbox" type="checkbox" name="type" value="{{image.path}}"></td>
+            <td style="text-align:left;">{{image.path}}</td>
+            <td style="text-align:center;">{{image.size}} MB</td>
+            <td style="text-align:center;">{{image.date}}</td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+  </center>
+  </div>
+  <script type="text/javascript">
+    function confirm_click() {
+      return confirm("Want to Delete?");
+    }
+  </script>
+  <script>
+    $(".custom-file-input").on("change", function () {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+  </script>
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("sort");
+      switching = true;
+      dir = "asc";
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        } else {
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+    </script>
+    <script type="text/javascript">
+      function selects() {
+        var ele = document.getElementsByName('type');
+        for (var i = 0; i < ele.length; i++) {
+          if (ele[i].type == 'checkbox')
+            ele[i].checked = true;
+        }
+      }
+      function deSelect() {
+        var ele = document.getElementsByName('type');
+        for (var i = 0; i < ele.length; i++) {
+          if (ele[i].type == 'checkbox')
+            ele[i].checked = false;
+        }
+      }
+    </script>
+  <br><br><br><br>
+</body>
+{% endblock %}

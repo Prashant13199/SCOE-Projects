@@ -1,0 +1,47 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}File Uploader{% endblock %}
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    function logout() {
+      return confirm("Are you sure to logout?");
+    }
+  </script>
+</head>
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fileupload.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fileupload-ui.css') }}">
+{% endblock %}
+{% block navbar %}
+<div class="w3-bar w3-purple navbar-fixed-top" style="font-size:15px">
+  <a href="/file" class="w3-bar-item w3-button" style="text-decoration: none"><i class="fa fa-file fa-lg"></i></a>
+  <a href="/firebase" class="w3-bar-item w3-button" style="text-decoration: none"><i class="fa fa-globe fa-lg"></i></a>
+  <a href="/image" class="w3-bar-item w3-button" style="text-decoration: none"><i class="fa fa-image fa-lg"></i></a>
+  <a href="/shared" class="w3-bar-item w3-button" style="text-decoration: none"><i
+      class="fa fa-share-square-o fa-lg"></i></a>
+  <a href="/bin" class="w3-bar-item w3-button" style="text-decoration: none"><i class="fa fa-trash fa-lg"></i></a>
+  <a href="/logout" onclick="return logout()" class="w3-bar-item w3-button w3-right" style="text-decoration: none"><i class="fa fa-sign-out fa-lg"></i></a>
+  <a href="/user" class="w3-bar-item w3-button w3-right" style="text-decoration: none"><i class="fa fa-user fa-lg"></i></a>
+  <li class="w3-bar-item w3-right">{% if session['name'] %}{{session['name']}}{% endif %}</li>
+  <!-- <li class="w3-bar-item w3-right">{% if session['free'] %}Free : {{session['free']}}GB{% endif %}</li> -->
+</div>
+{% endblock %}
+{% block content %}
+{% block page_content %}{% endblock %}
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+{% endblock %}

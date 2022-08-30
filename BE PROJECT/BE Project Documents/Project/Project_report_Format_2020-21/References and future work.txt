@@ -1,0 +1,16 @@
+1-------https://arxiv.org/pdf/1512.02325.pdf SSD: 	Single Shot MultiBox Detector(Wei Liu1 , Dragomir Anguelov)
+2------- https://arxiv.org/abs/1412.1441 Scalable, High-	Quality Object Detection Christian Szegedy, Scott Reed, Dumitru Erhan, 	Dragomir Anguelov, Sergey Ioffe
+3------- https://wdprogrammer.tistory.com/52 
+4-------Scalable High Quality Object Detection https://arxiv.org/pdf/1412.1441.pdf  and https://arxiv.org/abs/1512.02325 SSD: Single Shot MultiBox Detector
+5------http://www.scholarpedia.org/article/Local_Binary_Patterns Matti Pietikäinen, Machine Vision Group, Department of Electrical and Information Engineering, University of Oulu, Finland
+
+
+Future Works
+
+Similar models can be implemented for satisfying other need of the house such as an home assistant, home cleaner, lock based on face detection using raspberry pi based robots. These projects can also be implemented at low cost and will ensure a better functionality than traditional means. 
+
+Introducing New Models and Methods:
+The current model can also be extended by adding a lot of other functionalities such as verbal communication between owner and model using NLP instead of telegram commands, a separate app for communication with robot, notification by robot when it battery becomes low. Better algorithms can be used as and when they develop for navigation and person identification in the current model.
+
+Porting and Mobilization of code:
+The project was implemented in Python due to its inherent cross-compatibility between multiple Operating Systems It is well known, however, that Python does not best utilize system resources and can result in slower execution and more excessive memory usage than, for example, C++. Whilst implementation of the project in C++ would require OS dependent considerations for OS calls, it might greatly increase the performance of the application.

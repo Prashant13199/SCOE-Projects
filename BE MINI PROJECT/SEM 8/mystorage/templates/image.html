@@ -1,0 +1,359 @@
+{% extends "base.html" %}
+{% block title %}Images{% endblock %}
+{% block page_content %}
+<body style="color:grey;">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/basic.min.css" />
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+  <script>
+    $(document).ready(function () {
+      $('#sub').on('click', function () {
+        var arr = [];
+        $("input:checkbox[name=type]:checked").each(function () {
+          arr.push($(this).val());
+        });
+        var array = JSON.stringify(arr);
+        if (array.length == 2) {
+          showSnackbar("No files selected");
+          return
+        }
+        req = $.ajax({
+          url: '/deleteimages',
+          type: 'POST',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: array
+        });
+        req.done(function (data) {
+          var route = data.urll;
+          $("#refresh").load(" #refresh");
+          showSnackbar(data.message);
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#download').on('click', function () {
+        var arr = [];
+        $("input:checkbox[name=type]:checked").each(function () {
+          arr.push($(this).val());
+        });
+        var array = JSON.stringify(arr);
+        if (array.length == 2) {
+          showSnackbar("No files selected");
+          return
+        }
+        reqq = $.ajax({
+          url: '/downloadimages',
+          type: 'POST',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: array
+        });
+        reqq.done(function (data) {
+          showSnackbar(data.message);
+          var route = data.urll;
+          window.location.href = route;
+        });
+      });
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#uploadForm").on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          xhr: function () {
+            var xhr = new window.XMLHttpRequest();
+            xhr.timeout = 0;
+            xhr.upload.addEventListener("progress", function (evt) {
+              if (evt.lengthComputable) {
+                var percentComplete = ((evt.loaded / evt.total) * 100).toFixed(2);
+                $(".progress-bar").width(percentComplete + '%');
+                $(".progress-bar").html(percentComplete + '%');
+              }
+            },
+            false);
+            xhr.onerror = function() {
+              showSnackbar("Upload error");
+          };
+            xhr.ontimeout = function (e) {
+              showSnackbar("Request timeout");
+              };
+            return xhr;
+          },
+          type: 'POST',
+          url: '/uploadimage',
+          data: new FormData(this),
+          contentType: false,
+          cache: false,
+          processData: false,
+          beforeSend: function () {
+            $(".progress-bar").width('0%');
+            $('#uploadStatus').html(
+              '<div class="progress-bar progress-bar-striped bg-success progress-bar-animated"></div><br><p style="color:#28A74B;">Uploading... Please Wait for Upload confirmation</p>'
+              );
+          },
+          // error:function(){
+          //   showSnackbar("Upload failed");
+          //           $('#uploadStatus').html('<p style="color:#EA4335;">File upload failed, please try again.</p>');
+          //       },
+          success: function (data) {
+            $('#uploadForm')[0].reset();
+            $("#refresh").load(" #refresh");
+            $("#uploadStatus").load(" #uploadStatus");
+            showSnackbar(data.message);
+          }
+        });
+      });
+    });
+  </script>
+  <style>
+    #snackbar {
+      /* By Default, Hidden */
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      border-radius: 2px;
+      padding: 16px;
+      /* To always Keep on 
+        Top of screen */
+      position: fixed;
+
+      /* To be displayed above 
+        Parent HTML DOM element  */
+      z-index: 1;
+
+      /* Position Bottom Left 
+        Corner of Screen */
+      left: 10px;
+      bottom: 30px;
+    }
+
+    .show-bar {
+      visibility: visible !important;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+    function showSnackbar(msg) {
+      var snackBar =
+        document.getElementById("snackbar")
+      snackBar.innerHTML = msg
+      snackBar.className = "show-bar";
+      setTimeout(function () {
+        snackBar.className =
+          snackBar.className.replace("show-bar", "");
+      }, 3000);
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#share').on('click', function () {
+        var arr1 = [];
+        $("input:checkbox[name=type]:checked").each(function () {
+          arr1.push($(this).val());
+        });
+        var array1 = JSON.stringify(arr1);
+        if (array1.length == 2) {
+          showSnackbar("No files selected");
+          return
+        }
+        req = $.ajax({
+          url: '/shareimages',
+          type: 'POST',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: array1
+        });
+        req.done(function (data) {
+          showSnackbar(data.message);
+        });
+      });
+    });
+  </script>
+  <script>
+    function fileValidation() {
+      var fileInput =
+        document.getElementById('file1');
+
+      var filePath = fileInput.value;
+      var allowedExtensions =
+        /(\.jpg|\.jpeg|\.png|\.gif|\.ico|\.icon)$/i;
+
+      if (!allowedExtensions.exec(filePath)) {
+        showSnackbar(data.message);
+        fileInput.value = '';
+        return false;
+      }
+    }
+  </script>
+  <style>
+    li {
+      display: inline-block;
+    }
+
+    label {
+      border: 1px solid #fff;
+      display: block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    label:before {
+      background-color: white;
+      color: white;
+      content: " ";
+      display: block;
+      border-radius: 50%;
+      border: 1px solid grey;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 28px;
+      transition-duration: 0.4s;
+      transform: scale(0);
+    }
+
+    label img {
+      height: 160px;
+      width: 160px;
+      transition-duration: 0.2s;
+      transform-origin: 50% 50%;
+    }
+
+    :checked+label {
+      border-color: #ddd;
+    }
+
+    :checked+label:before {
+      content: "✓";
+      background-color: grey;
+      transform: scale(1);
+    }
+
+    :checked+label img {
+      transform: scale(0.8);
+      z-index: -1;
+    }
+  </style>
+
+  <script type="text/javascript" src="{{ url_for('gallery.static', filename='jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('gallery.static', filename='jquery.masonry.min.js') }}"></script>
+  <div id="snackbar" style="text-align:center;"></div>
+  <br><br><br><br>
+  <div class="container-fluid">
+    <h1 style="font-size:45px; float: left; "><b>image</b></h1>
+  </div>
+  <br>
+  <div class="container-fluid">
+    <form method="post" action="/uploadimage" enctype="multipart/form-data" id="uploadForm">
+      <input type="file" id="file1" name="files[]" multiple="true" autocomplete="off" required id="fileInput"
+        style="float:left">
+      <br><br>
+      <input type="submit" style="float: left" name="submit" value="Upload"
+        class="btn btn-sm w3-deep-orange ">&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="submit" style="float:left;margin-left: 10px; " class="btn w3-cyan btn-sm"><a
+          href="{{ url_for('show_gallery') }}" style="text-decoration: none;color:white"
+          onclick="return cancel_upload()">Cancel</a></button>
+      <br><br>
+      <div id="uploadStatus"></div>
+    </form>
+    <hr style="height:2px;border-width:0;color:gray;background-color:purple;width:100%">
+    <br>
+    <input type="button" onclick='selects()' value="Select All" class="btn btn-success btn-sm" style="float: left;">
+    <input type="button" onclick='deSelect()' value="Deselect All" class="btn btn-warning btn-sm"
+      style="float: left;margin-left:10px">
+    <button style="float: left;margin-left:10px" id="share" type="button" class="btn btn-light" class="social-link"
+      data-toggle="tooltip" title="Share"><i class="fa fa-share fa-sm"></i></button>&nbsp;&nbsp;
+    <button style="float: left;margin-left:10px" id="sub" type="button" class="btn btn-danger" class="social-link"
+      data-toggle="tooltip" title="Delete"><i class="fa fa-trash fa-sm"></i></button>&nbsp;&nbsp;
+    <button style="float: left;margin-left:10px" id="download" type="button" class="btn btn-light" class="social-link"
+      data-toggle="tooltip" title="Download"><i class="fa fa-download fa-sm"></i></button>
+    <br><br><br>
+    <ul id="refresh" class="container-fluid">
+      {% for year in year %}
+      <label><strong style="font-size:20px; color:gray;">{{year}}</strong></label><br>
+      <!-- <center> -->
+        {% for image in images %}
+        {% if image.date==year %}
+        <li>
+          <input style="display:none;" type="checkbox" id="{{image.path}}" value="{{image.path}}" name="type" />
+          <label for="{{image.path}}"><img src="{{ url_for('custom_static', filename=image.path) }}"
+              class="img-rounded" /></label>
+        </li>
+        {% endif %}
+        {% endfor %}
+      <!-- </center> -->
+      {% endfor %}
+    </ul>
+  </div>
+  <script type="text/javascript">
+    function cancel_upload() {
+      return confirm("Cancel uploading?");
+    }
+  </script>
+  <script>
+    $(".custom-file-input").on("change", function () {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+  </script>
+  <script type="text/javascript">
+    function selects() {
+      var ele = document.getElementsByName('type');
+      for (var i = 0; i < ele.length; i++) {
+        if (ele[i].type == 'checkbox')
+          ele[i].checked = true;
+      }
+    }
+
+    function deSelect() {
+      var ele = document.getElementsByName('type');
+      for (var i = 0; i < ele.length; i++) {
+        if (ele[i].type == 'checkbox')
+          ele[i].checked = false;
+      }
+    }
+  </script>
+  <br><br><br><br>
+</body>
+
+{% endblock %}

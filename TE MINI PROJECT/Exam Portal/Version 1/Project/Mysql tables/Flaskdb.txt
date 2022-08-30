@@ -1,0 +1,52 @@
+
+Create database flaskdb;
+
+
+
+
+
+Create table admin (id int unsigned auto_increment,name varchar(20), email varchar(30), password varchar(20) , primary key(id));
+
+
+
+
+
+create table users (id int unsigned auto_increment,name varchar(20), email varchar(30), password varchar(20) , prn varchar(20) , year varchar(4) , branch varchar(10),primary key(id));
+
+
+
+
+
+create table teacher (id int unsigned auto_increment,name varchar(20), email varchar(30), password varchar(20) , teacherid varchar(20) , subject varchar(4) , branch varchar(10),primary key(id));
+
+
+
+
+
+create table question (id int unsigned auto_increment , question varchar(200),option1 varchar(100),option2 varchar(100),option3 varchar(100),option4 varchar(100),correctoption varchar(100),marks int(3),subject varchar(10),unit int(5),branch varchar(10),primary key(id));
+
+
+
+
+create table op (opt1 varchar(5),opt2 varchar(5),opt3 varchar(5),opt4 varchar(5),opt5 varchar(5),opt6 varchar(5));
+
+
+
+
+create table id(id1 varchar(10),id2 varchar(10),id3 varchar(10),id4 varchar(10),id5 varchar(10),id6 varchar(10));
+
+
+
+
+
+create table final_result(prn varchar(10),year varchar(10),subject varchar(10),marks varchar(10));}
+
+
+
+
+create table result(id int(100),selected varchar(100),correct varchar(100));
+
+
+
+
+create table subjects(branch varchar(100),subject varchar(100));

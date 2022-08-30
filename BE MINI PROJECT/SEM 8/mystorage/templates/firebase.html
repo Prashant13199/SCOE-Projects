@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}Files{% endblock %}
+{% block page_content %}
+{% if success %}
+<script>
+    alert('{{message}}');
+</script>
+{% endif %}
+{% if error %}
+<script>
+    alert('{{message}}');
+</script>
+{% endif %}
+<body style="color:grey;">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/basic.min.css" />
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js">
+
+  </script>
+  <br><br><br><br>
+  <div class="container-fluid">
+    <h1 style="font-size:45px; float: left; "><b>firebase</b></h1>
+  </div>
+  <br>
+
+  <center>
+    <div class="container-fluid">
+      <form method="post" enctype="multipart/form-data" id="uploadForm" action="/firebase">
+        <input type="file" id="file1" name="file" required style="float:left">
+        <br><br>
+        <input type="submit" style="float: left" name="submit" value="Upload"
+          class="btn btn-sm w3-deep-orange ">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input onclick="return cancel_upload()" type="submit" style="float:left;margin-left: 10px; " value="Cancel" class="btn w3-cyan btn-sm"></input>
+          </form>
+      <hr style="height:2px;border-width:0;color:gray;background-color:purple;width:100%">
+      <br><br>
+      <div class="container-fluid">
+        <input class="form-control" id="myInput" type="text" placeholder="Search">
+      </div>
+      <br>
+      <div class='table-responsive' id="myTable">
+        <table class="table table-hover" style="background-color: white;width: 100%; color:grey" id="sort">
+          <thead>
+            <tr>
+              <th style="text-align:left;" onclick="sortTable(0)">file name <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+              <th style="text-align:right;">actions</th>
+            </tr>
+          </thead>
+          <tbody id="myTable1">
+            {% for row in lst %}
+            <tr>
+              <td style="text-align:left;">{{row['filename']}}</td>
+              <td style="text-align:right; padding-right: 20px;">
+                <ul class="social mb-0 list-inline mt-0">
+                  <li class="list-inline-item"><a href="{{row['url']}}" class="social-link"><i
+                        class="fa fa-download fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="/deletefirebase/{{row['filename']}}" class="social-link"><i
+                        class="fa fa-trash fa-lg"></i></a></li>
+                </ul>
+              </td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+      </div>
+  </center>
+  </div>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".clickable-row").click(function () {
+        window.location = $(this).data("href");
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function cancel_upload() {
+      if (document.getElementById("file1").value == "") {
+        showSnackbar("No File Selected!");
+        return
+      }
+      if(confirm("Cancel Uploading?")){
+        window.location.reload();
+      }
+    }
+  </script>
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("sort");
+      switching = true;
+      dir = "asc";
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        } else {
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+    <script type="text/javascript">
+      function selects() {
+        var ele = document.getElementsByName('type');
+        for (var i = 0; i < ele.length; i++) {
+          if (ele[i].type == 'checkbox')
+            ele[i].checked = true;
+        }
+      }
+      function deSelect() {
+        var ele = document.getElementsByName('type');
+        for (var i = 0; i < ele.length; i++) {
+          if (ele[i].type == 'checkbox')
+            ele[i].checked = false;
+        }
+      }
+    </script>
+  <br><br><br><br>
+</body>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Play Video{% endblock %}
+{% block page_content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+    <div class="container" style="word-wrap: break-word;">
+        <center>
+            <br><br><br><br>
+            <p style=" font-size:20px;">{{name}}</p>
+            <br>
+            <video id="my-video" class="video-js" width=100%  controls data-setup="{}">
+                <source src="{{ url_for('custom_static', filename=path) }}" />
+            </video>
+        </center>
+    </div>
+</body>
+{% endblock %}

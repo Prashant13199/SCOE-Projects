@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j
+cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+-->
+    <script>
+        var countdown = 10* 60 * 1000;
+        var timerId = setInterval(function(){
+          countdown -= 1000;
+          var min = Math.floor(countdown / (60 * 1000));
+          var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);
+        
+          if (countdown <= 0) {
+             alert("   Time Up! Redirecting to Result Page   ");
+             clearInterval(timerId);
+             document.getElementById("sub").click();
+             
+          } else {
+             document.getElementById("timer").innerHTML= min + " : " + sec;
+          }
+        
+        }, 1000);
+          
+        </script>
+<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script>
+    var count = 1;
+    function setColor(btn, color) {
+
+        var tex = $("#qu").text();
+        var texx =parseInt(tex);
+        var property = document.getElementById('sec'+texx);
+        if (count == 0) {
+            property.style.backgroundColor = "#FFFFFF"
+            count = 1;
+        }
+        else {
+            property.style.backgroundColor = "#7FFF00"
+            count = 0;
+        }
+    }
+
+    function scolor(color){
+        var tex = $("#qu").text();
+        var texx =parseInt(tex);
+        var property = document.getElementById('sec'+texx);
+
+        property.style.backgroundColor = color;
+
+    }
+
+    function nextbutton(btnn){
+      //alert({{value[0]['correctoption']}})
+      //var j=i+1;
+      //var k=j.toString();
+      //var property1 = document.getElementById(btn1);
+      //var property2 = document.getElementById(btnn);
+      //alert(1)
+      //var prop = document.getElementById(btnn).value;
+      var tex = $("#qu").text();
+      var texx =parseInt(tex)+1;
+      //alert(texx)
+      //var idd = $(prop).val()
+      //alert(prop);
+      //alert(tex);
+      //alert("#sec"+texx)
+      var prop=document.getElementById("sec"+texx).click();
+      //prop.style.backgroundColor = "#7FFF00";
+
+
+      }
+
+      function clearans(){
+      
+      var tex = $("#qu").text();
+      
+      document.getElementById('radio1').checked = false;
+      document.getElementById('radio2').checked = false;
+      document.getElementById('radio3').checked = false;
+      document.getElementById('radio4').checked = false;
+
+      var z = $("#qu").text();
+    var x =parseInt(z)-1;
+
+    arr[x][0]=99;
+      //prop.style.backgroundColor = "#7FFF00";
+      scolor("#FFFFFF")
+
+
+      }
+
+
+      function prevbutton(btnn){
+        //var j=i+1;
+        //var k=j.toString();
+        //var property1 = document.getElementById(btn1);
+        //var property2 = document.getElementById(btnn);
+        //alert(1)
+        //var prop = document.getElementById(btnn).value;
+        var tex = $("#qu").text();
+        var texx =parseInt(tex)-1;
+        //alert(texx)
+        //var idd = $(prop).val()
+        //alert(prop);
+        //alert(tex);
+        //alert("#sec"+texx)
+        var prop=document.getElementById("sec"+texx).click();
+        //prop.style.backgroundColor = "#7FFF00";
+
+
+        }
+        function bookm(btnn){
+          //var j=i+1;
+          //var k=j.toString();
+          //var property1 = document.getElementById(btn1);
+          //var property2 = document.getElementById(btnn);
+          //alert(1)
+          //var prop = document.getElementById(btnn).value;
+          var tex = $("#qu").text();
+          var texx =parseInt(tex);
+          //alert(texx)
+          //var idd = $(prop).val()
+          //alert(prop);
+          //alert(tex);
+          //alert("#sec"+texx)
+          var prop=document.getElementById("sec"+texx);
+          prop.style.backgroundColor = "#7FFF00";
+
+
+          }
+
+
+$(document).ready(function() {
+
+    $('.ques_but').on('click',function() {
+
+        var tex = $("#qu").text();
+        var texx =parseInt(tex);
+        var c = document.getElementById('sec'+texx);
+          
+        if(c.style.backgroundColor == "#90EE90" || c.style.backgroundColor == "")
+          {
+            c.style.backgroundColor = "#D3D3D3";
+          }
+      
+        var id = $(this).attr('member_id');
+        var sr = $(this).attr('value');
+        var checknum = parseInt(sr)-1;
+        //alert(checknum);
+        //var prop4 = document.getElementById("radio"+checknum);
+        //prop4.prop( "checked", true );
+        $('#radio1').prop( "checked", false );
+        $('#radio2').prop( "checked", false );
+        $('#radio3').prop( "checked", false );
+        $('#radio4').prop( "checked", false );
+
+        if(arr[checknum][0] != 99){
+              $('#radio' + arr[checknum][0]).prop( "checked", true );
+        }
+        //alert(id)
+        //var name = $('#nameInput'+member_id).val();
+        //var email = $('#emailInput'+member_id).val();
+        ///*
+        $('#qu').text(sr);
+        req = $.ajax({
+            url : '/update',
+            type : 'POST',
+            data : { 'id' : id }
+        });
+
+        req.done(function(data) {
+
+            //$().fadeOut(1000).fadeIn(1000);
+          //  $('#section').fadeOut(1000).fadeIn(1000);
+          //  alert('HELLO');
+            //$('#qu').text(data.srno);
+            $('#result').text(data.question);
+            $('#opton1').text(data.option1);
+            $('#opton2').text(data.option2);
+            $('#opton3').text(data.option3);
+            $('#opton4').text(data.option4);
+
+            //$('#opton4').text(data.option4);
+
+        });
+
+//*/
+    });
+
+});
+
+//var arr=[[99,99],[99,99],[99,99],[99,99],[99,99],[99,99]];
+var arr=[],i=0;
+var config={{value|tojson}}
+max={{length}}
+for(i;i<max;i++){
+  //arr.push(1);
+
+
+   arr.push([99,config[i]['correctoption'],config[i]['id']]);
+
+}
+arr.push([99,config[0]['subject']]);
+
+$(document).ready(function() {
+
+    $('#sub').on('click',function() {
+        var array = JSON.stringify(arr);
+        //alert(array)
+        req = $.ajax({
+            url : '/result',
+            type : 'POST',
+            contentType: 'application/json',
+            dataType : 'json',
+            //data : { 'keyy' : JSON.stringify(arr)}
+            data : array
+        });
+
+        req.done(function(data) {
+          //alert(data.keye)
+          console.log(data.marks);
+          var name = data.marks;
+          var route = data.urll;
+    //      alert(route)
+          //alert(mar)
+            //$('#opton4').text(data.option4);
+            window.location.href = route;
+        });
+
+//
+
+/*$.post('/result', {'keyy': arr}, null, 'json').then(function(data) {
+  console.log(data.result);
+  // expected output: "Success!"
+});*/
+
+    });
+
+});
+
+function saveans(select){
+   //alert('hua')
+    //var select = $(this).attr('value');
+  //  alert(select)
+    select1=parseInt(select)
+    var z = $("#qu").text();
+    var x =parseInt(z)-1;
+
+    arr[x][0]=select1;
+    scolor("#90EE90");
+
+}
+
+
+var count1 = 0;
+    function addbookm() {
+
+        var tex = $("#qu").text();
+        var texx =parseInt(tex);
+        var btn = document.getElementById('sec'+texx);
+        if (count1 == 0) {
+            //property.style.backgroundColor = "#FFFFFF"
+            btn.innerHTML = texx+'<i class = "fas fa-bookmark float-right"></i>';
+            count1 = 1;
+        }
+        else {
+            //property.style.backgroundColor = "#7FFF00"
+            btn.innerHTML = texx;
+            count1 = 0;
+        }
+    }
+
+</script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">ExaminGo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/sdashboard">Home</a>
+    </li>
+
+   <li class="nav-item">
+      <a class="nav-link" href="/practice">Practice</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/testseries">Test Series</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/mock">Mock Test</a>
+    </li>
+
+    </ul>
+     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    
+    
+    
+    {% if session['name'] %}
+    <li class="navbar-text">Time Left:&nbsp</li>
+    <li class="navbar-text" id="timer"></li>&nbsp&nbsp&nbsp
+    <li class="navbar-text ">{{session['name']}}</li>
+     
+    
+    
+    {% else %}
+
+      Not login
+
+   {% endif %}
+
+   </ul>
+
+</nav>
+</body>
+<style>
+
+  ul.nav-pills {
+    top: 80px;
+    overflow-y: scroll;
+    position: fixed;
+    width: 250px;
+    overflow-y: scroll;
+    bottom:50px;
+
+  }
+  div.col-8 div {
+    height: 430px;
+  }
+
+  </style>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<div class="container-fluid card card-body flex-fill">
+  <div class="row">
+    <nav class="col-sm-3 col-4" id="myScrollspy">
+
+      <ul class="nav nav-pills flex-column">
+      {%for i in range(length)%}
+        <li class="nav-item card" id="que{{i+1}}">
+          <button type ="button" class="btn active ques_but" id="sec{{i+1}}" value="{{i+1}}" member_id="{{value[i]['id']}}">{{i+1}}</button>
+        </li>
+        {%endfor%}
+      </ul>
+    </nav>
+    <div class="col-sm-9 col-8">
+
+
+      </br></br></br></br>
+
+      <div  class="card card-body flex-fill">
+        <h4>Q.<span id="qu" class="qus" value="abc">{{value[0]["srno"]}}</span></h4>
+        <span id="result"> {{value[0]["question"]}}</span>
+        <div class="form-check" id="sel" name="sellist">
+
+            <label class="form-check-label  flex-fill card card-body" id="butn" >
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="1" onclick="saveans('1')";/><span id="opton1">{{ value[0]["option1"]}}</span>
+          </label>
+
+            <label class="form-check-label card card-body flex-fill" >
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="2" onclick="saveans('2')";/><span id="opton2">{{ value[0]["option2"]}}</span>
+            </label>
+
+            <label class="form-check-label card card-body flex-fill">
+            <input type="radio" class="form-check-input" id="radio3" name="optradio" value="3" onclick="saveans('3')";/><span id="opton3">{{ value[0]["option3"]}}</span>
+            </label>
+
+            <label class="form-check-label card card-body flex-fill">
+            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="4" onclick="saveans('4')";/><span id="opton4">{{ value[0]["option4"]}}</span>
+            </label>
+          </br>
+          <button type="button" class="btn btn-labeled btn-primary float-left " onclick="prevbutton('radio1')";/><i class="fas fa-arrow-circle-left"></i> Previous</button>
+
+            <!--<button type="button" class="btn btn-labeled btn-info " id="button" value = "button" onclick="setColor('que', '#101010')";/>
+              <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark  <i class="fas fa-bookmark"></i></button>
+            -->
+            <button type="button" class="btn btn-labeled btn-warning float-center" id="button" value = "button" onclick="addbookm()";/>
+              <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark  <i class="fas fa-bookmark"></i></button>
+           
+            <button type="button" class="btn btn-labeled btn-danger float-center">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Invalid</button>
+                <button type="button" class="btn btn-labeled btn-info float-center" id="clear" onclick="clearans()";/>
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>clear</button>
+                  
+
+                <button type="button" id="nexb" class="btn btn-labeled btn-primary float-right" onclick="nextbutton('radio1')";/>Next <i class="fas fa-arrow-circle-right"></i></button>
+
+
+</div>
+                  </div>
+
+                  <button type="button" id='sub' class="btn btn-labeled btn-primary float-right">Submit Test</button>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+
+
+</html>

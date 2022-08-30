@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mock Exam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+.navbar{background:#222222;}
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:#fec400;transition: 0.2s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:15px 5px;transition:0.2s;}
+.dropdown-item.active, .dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+
+</style>
+<style>
+body {
+  background-image: url("https://www.clipartwiki.com/clipimg/detail/48-488450_ccjs-undergrad-blog-fall-final-exams-student-taking.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size:cover;
+}
+</style>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">ExaminGo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/sdashboard">Home</a>
+    </li>
+   
+   <li class="nav-item">
+      <a class="nav-link" href="/practice">Practice</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/testseries">Test Series</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/mock">Mock Test</a>
+    </li>
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Profile
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/schangepassword">Change Password</a>
+        <a class="dropdown-item" href="/logout">Logout</a>
+      </div></li>
+      
+ </ul>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    
+    
+    
+    {%if session['name']%}
+
+
+    <li class="navbar-text ">{{session['name']}}</li>
+     
+    
+    
+    {% else %}
+
+      Not login
+
+   {% endif %}
+
+   </ul>
+    
+
+</nav>
+<br><br><br><br>
+ <form class="form" action="/mock2" method="POST">
+{%for row in range(len)%}
+<div class="container">
+
+  <ul class="list">
+     <button type="submit" class="btn col-sm-3" name="sub" value="{{value[row]["subject"]}}">
+    <li style="word-spacing: 1em;" class="list-group-item list-group-item-secondary">{{value[row]["subject"]}}</button>
+       
+    
+  </ul>
+</div>
+{%endfor%}
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

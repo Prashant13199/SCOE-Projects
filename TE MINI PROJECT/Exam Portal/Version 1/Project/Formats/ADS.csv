@@ -1,0 +1,11 @@
+Question,Option 1,Option 2,Option 3,Option 4,Correct option,Marks
+"In linked list implementation of queue, if only front pointer is maintained, which of the following operation take worst case linear time?",Insertion,Deletion,To empty a queue,Both Insertion and To empty a queue,4,1
+"In linked list implementation of a queue, where does a new element be inserted?",At the head of link list,At the centre position in the link list,At the tail of the link list,At any position in the linked list,3,2
+"In linked list implementation of a queue, front and rear pointers are tracked. Which of these pointers will change during an insertion into a NONEMPTY queue?",Only front pointer,Only rear pointer,Both front and rear pointer,No pointer will be changed,2,2
+"In linked list implementation of a queue, front and rear pointers are tracked. Which of these pointers will change during an insertion into EMPTY queue?",Only front pointer,Only rear pointer,Both front and rear pointer,No pointer will be changed,3,1
+"In case of insertion into a linked queue, a node borrowed from the __________ list is inserted in the queue.",AVAIL,FRONT,REAR,n,1,1
+"In linked list implementation of a queue, from where is the item deleted?",At the head of link list,At the centre position in the link list,At the tail of the link list,Node before the tail,1,1
+"In linked list implementation of a queue, the important condition for a queue to be empty is?",FRONT is null,REAR is null,LINK is empty,FRONT==REAR-1,1,2
+The essential condition which is checked before insertion in a linked queue is?,Underflow,Overflow,Front value,Rear value,2,1
+The essential condition which is checked before deletion in a linked queue is?,Underflow,Overflow,Front value,Rear value,2,1
+Which of the following is true about linked list implementation of queue?,"In push operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from end","In push operation, if new nodes are inserted at the beginning, then in pop operation, nodes must be removed from the beginning","In push operation, if new nodes are inserted at the end, then in pop operation, nodes must be removed from end","In push operation, if new nodes are inserted at the end, then in pop operation, nodes must be removed from beginning",1,2

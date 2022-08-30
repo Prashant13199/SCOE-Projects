@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% block title %}Shared{% endblock %}
+{% block page_content %}
+
+<body style="color:grey">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/basic.min.css" />
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <br>
+  <ul class="flashes">
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert" style="margin-right: 50px;">
+      {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function deleteshared(name) {
+      var arr = [];
+      if (confirm_click()){
+        if (name != null) {
+          arr.push(name);
+          var array = JSON.stringify(arr);
+          req = $.ajax({
+            url: '/deleteshared',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: array
+          });
+          req.done(function (data) {
+            $("#myTable").load(" #myTable");
+            showSnackbar(data.message);
+          });
+      }
+    }
+  }
+  </script>
+  <style>
+    #snackbar {
+      /* By Default, Hidden */
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      border-radius: 2px;
+      padding: 16px;
+      /* To always Keep on 
+        Top of screen */
+      position: fixed;
+
+      /* To be displayed above 
+        Parent HTML DOM element  */
+      z-index: 1;
+
+      /* Position Bottom Left 
+        Corner of Screen */
+      left: 10px;
+      bottom: 30px;
+    }
+
+    .show-bar {
+      visibility: visible !important;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+    function showSnackbar(msg) {
+      var snackBar =
+        document.getElementById("snackbar")
+      snackBar.innerHTML = msg
+      snackBar.className = "show-bar";
+      setTimeout(function () {
+        snackBar.className =
+          snackBar.className.replace("show-bar", "");
+      }, 3000);
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myTable1 tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <style>
+    input.checkbox {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+  <div id="snackbar" style="text-align:center;"></div>
+  <br><br><br><br>
+  <div class="container-fluid">
+    <h1 style="font-size:45px; float: left; "><b>shared</b></h1>
+  </div>
+  <br>
+  <center>
+    <div class="container-fluid">
+      <input class="form-control" id="myInput" type="text" placeholder="Search.." style="background-color: white;">
+      <br>
+
+      <div class='table-responsive' id="myTable">
+        <table class="table table-hover" style="background-color: white; width: 100%; color:grey" id="sort">
+          <thead>
+            <tr>
+              <th style="text-align:left;" width="25%" onclick="sortTable(0)">file name <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+              <th style="text-align:center;" onclick="sortTable(1)">sharedBy <i class="fa fa-sort fa-sm"
+                  aria-hidden="true"></i></th>
+              <th style="text-align:center;" onclick="sortTable(2)">date <i class="fa fa-sort fa-sm"
+                aria-hidden="true"></i></th>
+              <th style="text-align:right;">actions </th>
+            </tr>
+          </thead>
+          <tbody id="myTable1">
+            {% for row in (lst) %}
+            <tr>
+              <td style="text-align:left;" width="100px"><a href="/showshared/{{row['filename']}}/{{row['path']}}">{{row['filename']}}</a></td>
+              <td style="text-align:center;">{{row["sharedBy"]}}</td>
+              <td style="text-align:center;">{{row["date"]}}</td>
+              <td style="text-align:right;">
+                <ul class="social mb-0 list-inline mt-0">
+                  <li class="list-inline-item"><a href="/downloadshared/{{row['filename']}}/{{row['path']}}" class="social-link"><i
+                    class="fa fa-download fa-lg"></i></a></li>
+                    {% if session['name'] == row['sharedBy'] %}
+                  <li class="list-inline-item"><a onclick="deleteshared('{{row['filename']}}')" href=# class="social-link"><i
+                        class="fa fa-trash fa-lg"></i></a></li>
+                    {% endif %}
+                </ul>
+              </td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </center>
+  </div>
+
+  <script type="text/javascript">
+    function confirm_click() {
+      return confirm("Confirm to Delete?");
+    }
+  </script>
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("sort");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc";
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount++;
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+  <br><br><br><br>
+</body>
+{% endblock %}

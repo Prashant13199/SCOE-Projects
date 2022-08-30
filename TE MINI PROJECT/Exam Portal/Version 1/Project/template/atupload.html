@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Teacher Upload</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="bootstrap-auto-dismiss-alert.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<style>
+ #banner {
+    background-image: linear-gradient(120deg, #91C4FF 0%, #F0F7FF 87%);
+    position: relative;
+    width: 100%;
+    height: 950px;
+  }
+  
+  #cloud-scroll {
+    background: url(http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png) repeat-x;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    -webkit-animation: 900000s backgroundScroll infinite linear;
+    -moz-animation: 900000s backgroundScroll infinite linear;
+    -o-animation: 900000s backgroundScroll infinite linear;
+    -ms-animation: 900000s backgroundScroll infinite linear;
+    animation: 900000s backgroundScroll infinite linear;
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
+  
+  @keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
+</style>
+<div id="banner">
+  <div id="cloud-scroll"></div>
+
+<style>
+.navbar{background:#222222;}
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:#fec400;transition: 0.2s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:15px 5px;transition:0.2s;}
+.dropdown-item.active, .dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+
+</style>
+
+  {% with messages = get_flashed_messages() %}
+	  {% if messages %}
+	    {% for message in messages %}
+		  <div class="alert alert-success alert-dismissible" role="alert" data-auto-dismiss="2000">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			{{message}}
+		  </div>
+		{% endfor %}
+	  {% endif %}
+	{% endwith %}
+	
+	{% block body %}{% endblock %}
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">ExaminGo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/adashboard">Home</a>
+    </li>
+   
+   <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Student
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/sregister">Register Student</a>
+        <a class="dropdown-item" href="/supdate">Update student</a>
+        <a class="dropdown-item" href="/slist">Student list</a>
+        <a class="dropdown-item" href="/asupload">Upload Student</a>
+        
+      </div>
+    </li>
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Teacher
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/tregister">Register Teacher</a>
+        <a class="dropdown-item" href="/tupdate">Update Teacher</a>
+        <a class="dropdown-item" href="/tlist">Teacher list</a>
+        <a class="dropdown-item" href="/atupload">Upload Teacher</a>
+      </div>
+    </li>
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Result Analysis
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/ryear">Year wise</a>
+        <a class="dropdown-item" href="/rsubject">Subject wise</a>
+      </div>
+    </li>
+    
+    <li class="glyphicon glyphicon-user">
+     <li class="nav-item">
+      <a class="nav-link" href="/logout">Logout</a>
+    </li>
+    
+    
+    </ul>
+ 
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    
+    
+    
+    {% if session['name'] %}
+
+
+    <li class="navbar-text ">Welcome {{session['name']}}</li>
+     
+    
+    
+    {% else %}
+
+      Not login
+
+   {% endif %}
+
+   </ul>
+</nav>
+<br>
+<center> <h1> Teacher Upload </h1> </center>
+<br> <br>
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-5 col-md-offset-10">
+<form action="/atupload" method="POST" enctype="multipart/form-data">
+    
+    <p>Select File:</p>
+    <input type="file" class="form-control-file" id="myFile" name="file">
+    <br><br>
+<div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>  
+    
+</form>
+</div></div></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
